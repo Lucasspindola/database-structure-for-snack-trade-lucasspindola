@@ -4,15 +4,26 @@
 -- Criação
 
 -- 1)
-
-
-
+INSERT INTO clientes
+  (nome, lealdade)
+VALUES
+  ('Georgia', 0);
 -- 2)
-
-
+INSERT INTO pedidos
+    (status, cliente_id)
+VALUES
+  ('Recebido', 6);
 
 -- 3)
-
+ INSERT INTO produtos_pedidos
+  (pedido_id, produto_id)
+VALUES
+  (6, 1),
+  (6, 2),
+  (6, 6),
+  (6, 6),
+  (6, 4),
+  (6, 7);
 
 
 -- Leitura
