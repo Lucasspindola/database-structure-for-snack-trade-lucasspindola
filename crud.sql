@@ -29,7 +29,21 @@ VALUES
 -- Leitura
 
 -- 1)
-
+ SELECT	
+c,
+pedidos,	
+p.id,
+p.nome,
+p.tipo,
+round(p.preço::NUMERIC,2),
+p.pts_de_lealdade  
+FROM 	
+produtos p 
+JOIN 	
+produtos_pedidos pp ON p.id = pp.produto_id
+JOIN pedidos  ON pedidos.id = pp.pedido_id
+JOIN clientes c ON c.id = pedidos.cliente_id 
+WHERE c.nome ILIKE 'Georgia';
 
 
 -- Atualização
